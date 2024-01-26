@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(to right bottom, rgb(167, 68, 68) 0%,  rgb(54, 163, 54) 20%, rgb(148, 83, 94) 40%, rgb(106, 36, 116) 60%, rgb(59, 59, 151) 100%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 400% 400%;
+    transition: 1s;
+    animation: BG 4s linear infinite;
+}
+body.active {
+    background: linear-gradient(to left bottom, #53441b , #4d2137 , #366136, #25254b  , #3d2152);
+    background-size: 400% 400%;
+    animation: BG 4s linear infinite;
+}
+@keyframes BG {
+    0% {
+        background-position: 20% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 50% 20%;
+    }
+}
+.container {
+    position: relative;
+    background-color: #e7e7e7;
+    width: 70px;
+    height: 40px;
+    padding: 0 6px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.795);
+}
+.circle {
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+    background: linear-gradient(to left top, rgba(193, 232, 255, 1) 0%, rgba(161, 199, 227, 1) 20%, rgba(122, 159, 193, 1) 40%, rgba(81, 117, 157, 1) 60%, rgba(39, 74, 120, 1) 80%, rgba(5, 38, 89, 1) 100%);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+.circle.active {
+    background: linear-gradient(to right top, rgba(251, 228, 216, 1) 0%, rgba(230, 205, 201, 1) 10%, rgba(213, 187, 188, 1) 20%, rgba(198, 170, 177, 1) 30%, rgba(182, 153, 165, 1) 40%, rgba(155, 123, 145, 1) 50%, rgba(133, 99, 129, 1) 60%, rgba(120, 84, 119, 1) 70%, rgba(106, 69, 109, 1) 80%, rgba(95, 57, 101, 1) 90%, rgba(82, 43, 91, 1) 100%);
+    left: 0;
+    margin-left: 5px;
+}
+.bx {
+    font-size: 30px;
+}
+.bxs-moon {
+    color: #727377;
+}
+.bxs-sun {
+    color: #e9cc7e;
+}
